@@ -47,6 +47,6 @@
     "$": true,
     "document": true,
     "window": true,
-    "Vivus": true
+    "io": true
   }
 }
