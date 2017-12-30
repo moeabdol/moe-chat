@@ -8,7 +8,8 @@ app.use(express.static('node_modules'));
 
 io.on('connection', socket => {
   console.log(`connected to ${socket.id}`);
-  // console.log(socket);
+
+  socket.on('chat', data => io.sockets.emit('chat', data));
 });
 
 http.listen(3000, err => {
