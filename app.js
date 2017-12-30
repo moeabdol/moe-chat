@@ -10,6 +10,7 @@ io.on('connection', socket => {
   console.log(`connected to ${socket.id}`);
 
   socket.on('chat', data => io.sockets.emit('chat', data));
+  socket.on('typing', data => socket.broadcast.emit('typing', data));
 });
 
 http.listen(3000, err => {
